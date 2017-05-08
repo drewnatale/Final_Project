@@ -5,10 +5,3 @@ h1{
     background: lightcyan;
     font-style: arial;
 }
-body {
-    text-align:center;
-    font-family: helvetica;
-}
-canvas {
-    border: 2px solid rgb(151, 149, 149);
-}
