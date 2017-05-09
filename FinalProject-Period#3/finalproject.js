@@ -1,9 +1,9 @@
 <!doctype html>
 <html>
 <meta charset="utf-8">
-<title>Canvas</title>
+    <title>Canvas</title>
     <style>
-    #canvas{
+#canvas{
     outline: 1px solid #000;
 }
 </style>
@@ -12,7 +12,7 @@
 
 <canvas id="canvas" height="400" width="600"></canvas>
 
-<script>
+    <script>
 
 var canvas = document.querySelector('#canvas');
 var context = canvas.getContext('2d');
