@@ -5,3 +5,7 @@ h1{
     background: lightcyan;
     font-family: Arial;
 }
+
+#canvas1{
+    outline: 1px solid #000;
+}

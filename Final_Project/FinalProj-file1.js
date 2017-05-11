@@ -1,30 +1,14 @@
-<!doctype html>
-<html>
-<meta charset="utf-8">
-    <title>Canvas</title>
-    <head>
-    <style>
-#canvas{
-    outline: 1px solid red;
-}
-</style>
-</head>
-<body>
-
-<canvas id="canvas" height="400" width="600"></canvas>
-
-    <script>
-var canvas = document.querySelector('#canvas');
+var canvas = document.querySelector('#canvas1');
 var context = canvas.getContext('2d');
 
-var xpos = 0;
-var ypos = 0;
+var xPos = 0;
+var yPos = 0;
 
-cantext.rect(xPos, yPos, 50, 50);
+context.rect(xPos, yPos, 50, 50);
 context.stroke();
 
 function move(e){
-
+    alert(e.keyCode);
     if(e.keyCode==39){
         xPos+=5;
     }
@@ -38,12 +22,8 @@ function move(e){
         yPos+=5;
     }
 
-    canvas.width=canvas.width;
-    context.rect(xPos, ypos, 50, 50);
+    canvas.width = canvas.width;
+    context.rect(xPos, yPos, 50, 50);
     context.stroke();
 }
-
 document.onkeydown = move;
-</script>
-</body>
-</html>
