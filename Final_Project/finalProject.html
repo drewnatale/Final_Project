@@ -1,49 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta charset="UTF-8">
+<title>Canvas</title>
 <head>
-    <meta charset="UTF-8">
-    <title>FinalProject</title>
-    <link rel = "stylesheet" type = "text/css" href = "stylingfinalproject.css"/>
-    <!--<script src = "FinalProj-file1.js"></script>-->
-
-    <script>
-        var canvas = document.querySelector('#canvas1');
-        var context = canvas.getContext('2d');
-
-        var xPos = 0;
-        var yPos = 0;
-
-        context.rect(xPos, yPos, 50, 50);
-        context.stroke();
-
-        function move(e){
-            if(e.keyCode==39){
-                xPos+=5;
-            }
-            if(e.keyCode==37){
-                xPos-=5;
-            }
-            if(e.keyCode == 38){
-                yPos-=5;
-            }
-            if(e.keyCode == 40){
-                yPos+=5;
-            }
-
-            canvas.width = canvas.width;
-            context.rect(xPos, yPos, 50, 50);
-            context.stroke();
+    <h1>Computer Programming Final Project: Simple Snake Game</h1>
+    <link rel = "stylesheet" href = "stylingfinalproject.css"/>
+    <style>
+        #canvas{
+            outline: 1px solid #000;
         }
-
-        document.onkeydown = move;
-
-    </script>
+    </style>
 </head>
 <body>
-    <h1>Final project: Computer Programming - Snake Game </h1>
-    <section id = "main">
-        <canvas id = "canvas1" width = "600" height = "400"></canvas>
-    </section>
+
+<canvas id="canvas" height="400" width="600"></canvas>
+
+<script>
+
+    var canvas = document.querySelector('#canvas');
+    var context = canvas.getContext('2d');
+    var snake;
+
+    var xPos = 0;
+    var yPos = 0;
+
+    context.rect(xPos, yPos, 50, 50);
+    context.stroke();
+
+    function move(e){
+
+        if(e.keyCode==39){
+            xPos+=5;
+        }
+        if(e.keyCode==37){
+            xPos-=5;
+        }
+        if(e.keyCode == 38){
+            yPos-=5;
+        }
+        if(e.keyCode == 40){
+            yPos+=5;
+        }
+
+        canvas.width=canvas.width;
+        context.rect(xPos, yPos, 50, 50);
+        context.stroke();
+    }
+
+    var drawSnake = function() {
+        var length = 4;
+        snake = [];
+
+    for (var i = length; i>=0; i--){
+        snake.push({x:i, y:0});}
+
+    }
+
+
+    document.onkeydown = move;
+
+
+</script>
 </body>
-</html>
+
+
 
