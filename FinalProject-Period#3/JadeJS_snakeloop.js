@@ -2,7 +2,7 @@
  * Created by BabcockChij1158 on 5/12/2017.
  */
 /**var canvas = ("#canvas")[0]**/
-var w = ("#canvas").width();
+/**var w = ("#canvas").width();
 var h = ("#canvas").height();
 var x = document.getElementById("canvas");
 canvas = x.getContext("2d");
@@ -23,7 +23,6 @@ var drawMod = (function (){
         x.strokeStyle = "darkgreen";
         x.strokeRect(x*snakeSize, y*snakeSize, snakeSize, snakeSize);
     }
-
     var yummy = function(x, y) {
         x.fillstyle = "red";
         x.fillRect(x*snakeSize, y*snakeSize, snakeSize, snakeSize);
@@ -66,11 +65,11 @@ var drawMod = (function (){
      Therefore if x or y of an element of the snake, don't fit inside the canvas, the game will be stopped.
      If the check_collision is true, it means the the snake has crashed on its body itself, then the game will be stopped again.
      */
-    if (snakeX == -1 || snakeX == w / snakeSize || snakeY == -1 || snakeY == h / snakeSize || check_collision(snakeX, snakeY, snake)) {
+/**    if (snakeX == -1 || snakeX == w / snakeSize || snakeY == -1 || snakeY == h / snakeSize || check_collision(snakeX, snakeY, snake)) {
         //Stop the game.
 
         //Make the start button enabled again.
-        btn.removeAttribute('disabled', true);
+       // btn.removeAttribute('disabled', true);
 
         //Clean up the canvas.
         x.clearRect(0, 0, w, h);
@@ -173,4 +172,4 @@ var drawMod = (function (){
                     break;
             }
     }
-})(window, document, drawMod);
+})(window, document, drawMod);**/
