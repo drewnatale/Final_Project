@@ -5,7 +5,7 @@ var snakeY = 2;
 var height = 30;
 var width = 30;
 //how often the game updates
-var interval = 100; //every 1/10 of a second =100
+var interval = 100;//every 1/10 of a second =100
 var increment = 1; //how much out snake grows each time
 
 
@@ -18,7 +18,6 @@ var fY;
 var running = false;
 var gameOver = false;
 var direction = -1; //up = 0, down = -1, left  = 1, right  = 2, can change this later if want
-var interval = 100;
 var int; //short for interval, this is the identifier for the interval we set eariler
 
 /**
@@ -63,6 +62,7 @@ function get(x,y){
 }
 
 function set(x,y,value){
+    if(x!= null && y!=null)
     get(x,y).setAttribute("class",value);
 }
 
@@ -115,18 +115,32 @@ function gameLoop(){
     if(running && !gameOver){
         update();
     }else if(gameOver){
-        clearInterval(interval);
+        clearInterval(int);
     }
 }
 
 function update(){
-    setBlock(fX, fY, "fruit");
+    set(fX, fY, "fruit");
     set(tailX[length], tailY[length], "blank");
-    if(direction == 0){}
-
-
+    if(direction == 0)
+        snakeY--;
+    else if(direction == -1)
+        snakeY++; //is going down
+    else if(direction == 1)
+        snakeX--;
+    else if(direction == 2)
+        snakeX++;
+    set(snakeX, snakeY, "snake");
 
 
 }
 
+function updateTail(){
+    for (var i = length; i > 0; i--){//going from back to front of array
+        tailX[i] = tailX[i-1];
+        tailY[i] = tailY[i-1];
+    }
+    tailX[0] = snakeX;
+    tailY[0] = snakeY;//update the front of the tail to the head of the tail
+}
 run();
