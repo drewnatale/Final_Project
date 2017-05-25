@@ -6,10 +6,11 @@ var height = 30;
 var width = 30;
 //how often the game updates
 var interval = 100;//every 1/10 of a second =100
-var increment = 1; //how much out snake grows each time
+var increment = 4; //how much out snake grows each time
 
 
 //game variables
+var length = 0;
 var tailX = [snakeX];
 var tailY = [snakeY];
 //coordinates of the fruit/food
@@ -19,6 +20,7 @@ var running = false;
 var gameOver = false;
 var direction = -1; //up = 0, down = -1, left  = 1, right  = 2, can change this later if want
 var int; //short for interval, this is the identifier for the interval we set eariler
+var score = 0;
 
 /**
  Entry point of the game
@@ -119,20 +121,34 @@ function gameLoop(){
     }
 }
 
-function update(){
+function update() {
     set(fX, fY, "fruit");
+    updateTail();
     set(tailX[length], tailY[length], "blank");
-    if(direction == 0)
+    if (direction == 0)
         snakeY--;
-    else if(direction == -1)
+    else if (direction == -1)
         snakeY++; //is going down
-    else if(direction == 1)
+    else if (direction == 1)
         snakeX--;
-    else if(direction == 2)
+    else if (direction == 2)
         snakeX++;
     set(snakeX, snakeY, "snake");
+    for (var i = tailX.length - 1; i >= 0; i--){
+        if (snakeX == tailX[i] && snakeY == tailY[i]) {
+            gameOver = true;
+            break;
+        }
+    }
+    if (snakeX == 0 || snakeY == width - 1 || snakeY == 0 || snakeY == height - 1)
+        gameOver = true;
+    else if(snakeX == fX && snakeY == fY){
+        score+=4;
+        createFruit();
+        length+=increment;
 
-
+    }
+    document.getElementById("score").innerHTML = "Score: " + score;
 }
 
 function updateTail(){
