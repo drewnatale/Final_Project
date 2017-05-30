@@ -19,6 +19,8 @@ var increment = 4; //how much out snake grows each time
 var length = 0;
 var tailX = [snakeX];
 var tailY = [snakeY];
+var tailX2 = [snakeX2];
+var tailY2 = [snakeY2];
 //coordinates of the fruit/food
 var fX;
 var fY;
@@ -196,29 +198,36 @@ function updateTail(){
 
 
 
+function gameLoop(){
+    if(running && !gameOver){
+        update2();
+    }else if(gameOver){
+        clearInterval(int);
+    }
+}
 
 function update2() {
     set(fX2, fY2, "fruit");
     updateTail2();
-    set(tailX[length], tailY[length], "blank");
+    set(tailX2[length], tailY2[length], "blank");
     if (direction == 0)
-        snakeY--;
+        snakeY2--;
     else if (direction == -1)
-        snakeY++; //is going down
+        snakeY2++; //is going down
     else if (direction == 1)
-        snakeX--;
+        snakeX2--;
     else if (direction == 2)
-        snakeX++;
-    set(snakeX, snakeY, "snake");
-    for (var i = tailX.length - 1; i >= 0; i--){
-        if (snakeX == tailX[i] && snakeY == tailY[i]) {
+        snakeX2++;
+    set(snakeX2, snakeY2, "snake2");
+    for (var i = tailX2.length - 1; i >= 0; i--){
+        if (snakeX2 == tailX2[i] && snakeY2 == tailY2[i]) {
             gameOver = true;
             break;
         }
     }
-    if (snakeX == 0 || snakeY == width - 1 || snakeY == 0 || snakeY == height - 1)
+    if (snakeX2 == 0 || snakeY2 == width - 1 || snakeY2 == 0 || snakeY2 == height - 1)
         gameOver = true;
-    else if(snakeX == fX && snakeY == fY){
+    else if(snakeX2 == fX2 && snakeY2 == fY2){
         score+=4;
         createFruit();
         length+=increment;
@@ -229,11 +238,11 @@ function update2() {
 
 function updateTail2(){
     for (var i = length; i > 0; i--){//going from back to front of array
-        tailX[i] = tailX[i-1];
-        tailY[i] = tailY[i-1];
+        tailX2[i] = tailX2[i-1];
+        tailY2[i] = tailY2[i-1];
     }
-    tailX[0] = snakeX;
-    tailY[0] = snakeY;//update the front of the tail to the head of the tail
+    tailX2[0] = snakeX2;
+    tailY2[0] = snakeY2;//update the front of the tail to the head of the tail
 }
 
 
