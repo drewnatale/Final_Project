@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+//11:51//
+<head>
+    <meta charset="UTF-8">
+    <title>Final Project(2)</title>
+</head>
+<body>
+    <div style = "width: 888px; margin: auto;">
+        <canvas id = "myCanvas" width = "800" height = "500"
+                style = "background: black;">
+        </canvas>
+    </div>
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        var dir, score, balls, food;
+
+
+        function init(){
+            dir = 'right';
+            score = 0;
+            balls = [
+                {x:40, y:40},
+                {x:60, y:40},
+                {x:80, y:40}
+            ];
+        }
+
+        init();
+
+        function add(){
+            var lastBall = balls[balls.length-1];
+            balls.push({x:lastBall.x +20,y: lastBall.y});
+        }
+
+
+        function ani(){
+            ctx.clearRect(0,0, 888, 555);
+            balls.shift();
+            add();
+
+
+
+            for( var i = 0; i<balls.length; i++){
+                ball = balls[i];
+                if(i == balls.length -1){
+                    ctx.fillStyle = "lightgreen";
+                }
+                else{
+                    ctx.fillStyle = "#ff0000";
+                }
+
+                if(ball.x > 780){
+                    ball.x = 0
+                }
+                ctx.fillRect(ball.x, ball.y, 19, 19);
+            }
+        }
+
+        setInterval(ani, 222);
+    </script>
+
+</body>
+</html>
