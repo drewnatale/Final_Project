@@ -33,7 +33,8 @@ var running = false;
 var running2 = false;
 var gameOver = false;
 var gameOver2 = false;
-var direction = -1; //up = 0, down = -1, left  = 1, right  = 2, can change this later if want
+var direction = -1;
+var direction2 = -1;//up = 0, down = -1, left  = 1, right  = 2, can change this later if want
 var int;
 var int2;//short for interval, this is the identifier for the interval we set eariler
 var score = 0;
@@ -91,6 +92,15 @@ function set(x,y,value){
     if(x!= null && y!=null)
         get(x,y).setAttribute("class",value);
 }
+function get2(x,y){
+    return document.getElementById(x+"-"+y);
+}
+
+function set2(x,y,value) {
+    if (x != null && y != null)
+        get2(x, y).setAttribute("class", value);
+}
+
 //fruit
 function rand(min, max){
     return Math.floor(Math.random() * (max-min) + min);
@@ -140,14 +150,14 @@ window.addEventListener("keypress", function key(){
 //snake2
 window.addEventListener("keypress", function key2(){
     var key2 = event.keyCode;
-    if(direction != -1 &&(key2 == 38))
-        direction = 0;
-    else if(direction != 0 &&(key2 == 40))
-        direction = -1;
-    else if(direction != 2 &&(key2 == 37))
-        direction = 1;
-    else if(direction != 1 &&(key2 == 39))
-        direction = 2;
+    if(direction2 != -1 &&(key2 == 38))
+        direction2 = 0;
+    else if(direction2 != 0 &&(key2 == 40))
+        direction2 = -1;
+    else if(direction2 != 2 &&(key2 == 37))
+        direction2 = 1;
+    else if(direction2 != 1 &&(key2 == 39))
+        direction2 = 2;
     if(!running2)
         running2 = true;
 
@@ -207,18 +217,18 @@ function updateTail(){
 }
 
 function update2() {
-    set(fX2, fY2, "fruit");
+    set2(fX2, fY2, "fruit");
     updateTail2();
-    set(tailX2[length2], tailY2[length2], "blank");
-    if (direction == 0)
+    set2(tailX2[length2], tailY2[length2], "blank");
+    if (direction2 == 0)
         snakeY2--;
-    else if (direction == -1)
+    else if (direction2 == -1)
         snakeY2++; //is going down
-    else if (direction == 1)
+    else if (direction2 == 1)
         snakeX2--;
-    else if (direction == 2)
+    else if (direction2 == 2)
         snakeX2++;
-    set(snakeX2, snakeY2, "snake2");
+    set2(snakeX2, snakeY2, "snake2");
     for (var i = tailX2.length - 1; i >= 0; i--){
         if (snakeX2 == tailX2[i] && snakeY2 == tailY2[i]) {
             gameOver2 = true;
@@ -230,7 +240,7 @@ function update2() {
     else if(snakeX2 == fX2 && snakeY2 == fY2){
         score2+=4;
         createFruit();
-        length2+=increment;
+        length2+=increment2;
 
     }
     document.getElementById("score2").innerHTML = "Score: " + score2;
@@ -244,15 +254,6 @@ function updateTail2(){
     tailX2[0] = snakeX2;
     tailY2[0] = snakeY2;//update the front of the tail to the head of the tail
 }
-
-
-
-
-
-
-
-
-
 
 
 run();

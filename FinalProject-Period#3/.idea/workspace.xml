@@ -23,7 +23,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SnakeVideoHTML_jade.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SnakeVideoHTML_jade.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SnakeVideoHTML_jade.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
@@ -49,20 +49,32 @@
       <file leaf-file-name="SnakeVideoJS_jade.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SnakeVideoJS_jade.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+            <state relative-caret-position="102">
+              <caret line="36" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="161" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SnakeVideoJSEdits_jade.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SnakeVideoJSEdits_jade.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SnakeVideoJSEdits_jade.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="226" column="5" selection-start-line="226" selection-start-column="5" selection-end-line="226" selection-end-column="5" />
+            <state relative-caret-position="254">
+              <caret line="105" column="46" selection-start-line="0" selection-start-column="0" selection-end-line="258" selection-end-column="6" />
               <folding>
                 <element signature="e#0#51#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2PlayerSnakeEdits_jade.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/2PlayerSnakeEdits_jade.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="370">
+              <caret line="281" column="14" selection-start-line="281" selection-start-column="14" selection-end-line="281" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#50#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -97,8 +109,9 @@
       <list>
         <option value="$PROJECT_DIR$/SnakeVideoJS_jade.js" />
         <option value="$PROJECT_DIR$/SnakeVideoCSS_jade.css" />
-        <option value="$PROJECT_DIR$/SnakeVideoJSEdits_jade.js" />
         <option value="$PROJECT_DIR$/SnakeVideoHTML_jade.html" />
+        <option value="$PROJECT_DIR$/SnakeVideoJSEdits_jade.js" />
+        <option value="$PROJECT_DIR$/2PlayerSnakeEdits_jade.js" />
       </list>
     </option>
   </component>
@@ -109,8 +122,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="125" />
-    <option name="y" value="227" />
+    <option name="x" value="118" />
+    <option name="y" value="19" />
     <option name="width" value="1373" />
     <option name="height" value="966" />
   </component>
@@ -139,9 +152,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -162,6 +173,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -532,14 +545,15 @@
       <workItem from="1495816896007" duration="2612000" />
       <workItem from="1496162725637" duration="1668000" />
       <workItem from="1496248646810" duration="2814000" />
+      <workItem from="1496335462375" duration="2402000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14880000" />
+    <option name="totallyTimeSpent" value="17282000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="125" y="227" width="1373" height="966" extended-state="0" />
+    <frame x="118" y="19" width="1373" height="966" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -608,6 +622,51 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/SnakeVideoHTML_jade.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#1;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SnakeVideoCSS_jade.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SnakeVideoJS_jade.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SnakeVideoJSEdits_jade.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#51#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FinalProject-Period#3.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SnakeVideoHTML_jade.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -795,14 +854,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SnakeVideoHTML_jade.html">
+    <entry file="file://$PROJECT_DIR$/2PlayerSnakeEdits_jade.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="370">
+          <caret line="281" column="14" selection-start-line="281" selection-start-column="14" selection-end-line="281" selection-end-column="14" />
           <folding>
-            <element signature="n#style#0;n#h1#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="e#0#50#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SnakeVideoJSEdits_jade.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="105" column="46" selection-start-line="0" selection-start-column="0" selection-end-line="258" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#51#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SnakeVideoJS_jade.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="36" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="161" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -814,20 +890,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SnakeVideoJS_jade.js">
+    <entry file="file://$PROJECT_DIR$/SnakeVideoHTML_jade.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SnakeVideoJSEdits_jade.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="226" column="5" selection-start-line="226" selection-start-column="5" selection-end-line="226" selection-end-column="5" />
+        <state relative-caret-position="221">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
-            <element signature="e#0#51#0" expanded="false" />
+            <element signature="n#style#0;n#h1#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#1;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
