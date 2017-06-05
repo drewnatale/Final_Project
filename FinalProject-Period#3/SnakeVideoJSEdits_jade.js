@@ -4,8 +4,8 @@
 //settings
 var snakeX = 2;
 var snakeY = 2;
-var snakeX2 = 27;
-var snakeY2 = 27;
+var snakeX2 = 4;
+var snakeY2 = 4;
 
 //size of the screen
 var height = 30;
@@ -128,27 +128,26 @@ function createFruit(){
 window.addEventListener("keypress", function key(){
     //if key is W set direction
     var key = event.keyCode;//want to restrict them from going strait from down to up
-    if(direction != -1 && (key == 119 || key == 87)) //key codes for upper and lower case "w"
+    if(direction != -1 && (key == 87)) //key codes for upper and lower case "w"
         direction = 0;
     //if key is S set direction down;
-    else if(direction != 0 && (key == 115 || key == 83)) //key codes for upper and lower case "s"
+    else if(direction != 0 && (83)) //key codes for upper and lower case "s"
         direction = -1; //sets direction down
     //if key is A set direction left
-    else if(direction != 2 && (key == 97 || key == 65)) //key codes for upper and lower case "a"
+    else if(direction != 2 && (key == 65)) //key codes for upper and lower case "a"
         direction = 1; //sets direction left
     //if key is D set direction right
-    else if(direction != 1 && (key == 100 || key == 68)) //key codes for upper and lower case "d"
+    else if(direction != 1 && (key == 68)) //key codes for upper and lower case "d"
         direction = 2; //sets direction right
     if(!running)
         running = true;
     else if(key == 32)//space bar
         running = false; // will allow you to pause game without restarting
 
-
 });
 
 //snake2
-window.addEventListener("keypress", function key2(){
+window.addEventListener("keydown", function key2(){
     var key2 = event.keyCode;
     if(direction2 != -1 &&(key2 == 38))
         direction2 = 0;
@@ -160,6 +159,7 @@ window.addEventListener("keypress", function key2(){
         direction2 = 2;
     if(!running2)
         running2 = true;
+
 
 });
 
@@ -257,3 +257,4 @@ function updateTail2(){
 
 
 run();
+//https://stackoverflow.com/questions/5203407/javascript-multiple-keys-pressed-at-once
