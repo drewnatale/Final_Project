@@ -31,9 +31,39 @@
 
         init();
 
+        document.addEventListener("keydown", funxtion(e){
+            var keyCode = e.keyCode;
+            if(e.keyCode == 37 && dir != 'right'){
+                dir = 'left';
+            }
+            if(e.keyCode == 38 && dir != 'down'){
+                dir = 'up';
+            }
+            if(e.keyCode == 39 && dir != 'left'){
+                dir = 'right';
+            }
+            if(e.keyCode == 40 && dir != 'up'){
+                dir = 'down';
+            }
+
+        });
+
         function add(){
             var lastBall = balls[balls.length-1];
-            balls.push({x:lastBall.x +20,y: lastBall.y});
+            if(dir == 'right'){
+                balls.push({x:lastBall.x +20,y: lastBall.y});
+            }
+            if(dir == 'down'){
+                balls.push({x:lastBall.x, y: lastBall.y +20});
+            }
+
+            if(dir == 'left'){
+                balls.push({x:lastBall.x -20,y: lastBall.y});
+            }
+            if(dir == 'up'){
+                balls.push({x:lastBall.x,y: lastBall.y -20});
+            }
+
         }
 
 
