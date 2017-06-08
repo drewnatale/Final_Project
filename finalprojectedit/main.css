@@ -1,22 +1,15 @@
-h1 {
-    font-color: blue;
+#SplashScreen{
+    font-family: 'Press Start 2P', cursive;
+    text-align:center;
+
 }
 
+#StartButton{
+    font-style: italic;
+    text-align:center;
+    font-family: 'Press Start 2P', cursive;
+}
 
-<!DOCTYPE html>
-  <html lang="en">
-<head>
- <meta charset="UTF-8">
-<title>Title</title>
-              <link rel = "stylesheet" href = "main.css">
-</head>
-  <body>
-  <div id="SplashScreen">
-<h1>Snake</h1>
-           <input id="StartButton" type="button" value="Start"/>
-</div>
-
-  <script src = "edit.js"></script>
-
-                            </body>
-                              </html>
+body{
+    background-color: aquamarine;
+}
