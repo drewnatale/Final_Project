@@ -12,7 +12,7 @@ td{
 }
 
 .blank{
-    background-color:black;
+    background-color: midnightblue;
 }
 
 .snake{
@@ -24,12 +24,17 @@ td{
 }
 
 .wall{
-    background-color: green;
+    background-color: deepskyblue;
 }
 
 .fruit{
-    background-color: red;
+    background-color: mediumvioletred;
 }
 .blank2{
     background-color: black;
+}
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    padding: 10px;
 }
