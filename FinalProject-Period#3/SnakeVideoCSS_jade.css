@@ -45,12 +45,19 @@ h1 {
     border: 5px solid white;
     background-color: #66CCCC;
     width: 200px;
-    margin: 20px 0px;
+    margin: 20px 200px 20px 20px;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 #game{
-    width: 600px;
     align-content: center;
+    display: inline-block;
+    margin: 100px;
+
 }
+
 #wrapper{
     display: inline-block;
+    align-content: center;
+
 }
+
