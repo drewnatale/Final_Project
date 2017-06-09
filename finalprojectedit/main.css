@@ -1,0 +1,15 @@
+#SplashScreen{
+    font-family: 'Press Start 2P', cursive;
+    text-align:center;
+
+}
+
+#StartButton{
+    font-style: italic;
+    text-align:center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body{
+    background-color: aquamarine;
+}
